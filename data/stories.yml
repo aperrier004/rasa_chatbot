@@ -1,0 +1,55 @@
+version: "3.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_ask_info
+  - intent: affirm
+  - action: info_form
+  - intent: country
+  - action: utter_thanks_info
+  - action: utter_ask_advice
+  - intent: affirm
+  - action: #call API
+  - intent: thankful
+  - action: utter_goodbye
+
+- story: Unhappy path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_ask_info
+  - intent: affirm
+  - action: utter_ask_age
+  - intent: age
+  - action: utter_ask_country
+  - intent: country
+  - action: utter_thanks_info
+  - action: utter_ask_advice
+  - intent: deny
+  - action: utter_ask_already_know
+  - intent: affirm
+  - action: utter_goodbye
+
+- story: Unhappy path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_ask_info
+  - intent: affirm
+  - action: utter_ask_age
+  - intent: age
+  - action: utter_ask_country
+  - intent: country
+  - action: utter_thanks_info
+  - action: utter_ask_advice
+  - intent: deny
+  - action: utter_ask_already_know
+  - intent: deny
+  - action: utter_mean_goodbye
