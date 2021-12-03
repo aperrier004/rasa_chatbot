@@ -11,3 +11,8 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Give the weather for the default city
+  steps:
+  - intent: weather
+  - action: utter_weather

@@ -104,7 +104,8 @@ nlu:
     - (age_number)
     - I'm (age_number)
 
-- lookup: country_list
+# A VOIR SI ON EN A VRAIMENT BESOIN
+- lookup: city_list
   examples: |
     - Afghanistan
     - Albania
@@ -112,11 +113,11 @@ nlu:
     - Zambia
     - Zimbabwe
 
-- intent: country
+- intent: city
   examples: |
-    - I live in (country_list)
-    - (country_list)
-    - My country is (country_list)
+    - I live in (city_list)
+    - (city_list)
+    - My city is (city_list)
 
 - intent: thankful
   examples: |
@@ -124,6 +125,13 @@ nlu:
     - thx
     - ty
     - Thanks
+
+- intent: weather
+  examples: |
+    - what's the weather
+    - i want to know the weather of today
+    - tell me the weather forcast
+    - hows the weather today
 
 
 

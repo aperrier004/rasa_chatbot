@@ -9,25 +9,42 @@ intents:
   - mood_unhappy
   - bot_challenge
   - age
-  - country
+  - city
+  - weather
+
+entities:
+- age
+- city
+- weather
 
 slots:
   age:
     type: text
     influence_conversation: false
     mappings:
-    - type: custom
-  country:
+    - type: from_entity
+      entity: age
+
+  city:
     type: text
     influence_conversation: false
     mappings:
-    - type: custom
+    - type: from_entity
+      entity: city
+
+  weather:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: weather
+
 
 forms:
-  your_form:
+  user_form:
     required_slots:
-    - age
-    - country
+      - age
+      - city
 
 responses:
   utter_greet:
@@ -52,8 +69,8 @@ responses:
   utter_ask_info:
   - text: "ok, can I have some information about you ?"
 
-  utter_ask_country:
-  - text: "What's your country ?"
+  utter_ask_city:
+  - text: "What's your city ?"
 
   utter_ask_age:
   - text: "How old are you ?"
@@ -69,6 +86,13 @@ responses:
 
   utter_mean_goodbye:
   - text: "Ok, such a shame for you, bye."
+
+  utter_ask_weather:
+  - text: "Would you like to know about the weather ?"
+
+# TODO
+  utter_weather:
+  - text: "Here is the weather for the city {city}: {weather}°"
 
 session_config:
   session_expiration_time: 60

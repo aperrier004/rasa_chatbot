@@ -9,15 +9,16 @@ stories:
   - intent: mood_great
   - action: utter_ask_info
   - intent: affirm
-  - action: info_form
-  - intent: country
+  - action: user_form
+  - active_loop: user_form
   - action: utter_thanks_info
-  - action: utter_ask_advice
+  - action: utter_ask_weather
   - intent: affirm
-  - action: #call API
+  - action: utter_weather
   - intent: thankful
   - action: utter_goodbye
 
+# TODO : a modifier
 - story: Unhappy path 1
   steps:
   - intent: greet
@@ -27,8 +28,8 @@ stories:
   - intent: affirm
   - action: utter_ask_age
   - intent: age
-  - action: utter_ask_country
-  - intent: country
+  - action: utter_ask_city
+  - intent: city
   - action: utter_thanks_info
   - action: utter_ask_advice
   - intent: deny
@@ -45,8 +46,8 @@ stories:
   - intent: affirm
   - action: utter_ask_age
   - intent: age
-  - action: utter_ask_country
-  - intent: country
+  - action: utter_ask_city
+  - intent: city
   - action: utter_thanks_info
   - action: utter_ask_advice
   - intent: deny
