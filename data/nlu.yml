@@ -93,7 +93,7 @@ nlu:
     - am I talking to a human?
 
 - regex: age_number
-  examples:
+  examples: |
     - ^100|[1-9]?\d$
 
 - intent: age

@@ -15,9 +15,13 @@ slots:
   age:
     type: text
     influence_conversation: false
+    mappings:
+    - type: custom
   country:
     type: text
     influence_conversation: false
+    mappings:
+    - type: custom
 
 forms:
   your_form:
