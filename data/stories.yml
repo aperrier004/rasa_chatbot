@@ -7,14 +7,14 @@ stories:
   - intent: greet
   - action: utter_greet
   - intent: mood_great
-  - action: utter_ask_info
+  - action: utter_info
   - intent: affirm
   - action: user_form
   - active_loop: user_form
   - action: utter_thanks_info
-  - action: utter_ask_weather
-  - intent: affirm
   - action: utter_weather
+  - intent: affirm
+  - action: utter_weather_res
   - intent: thankful
   - action: utter_goodbye
 
@@ -24,33 +24,13 @@ stories:
   - intent: greet
   - action: utter_greet
   - intent: mood_great
-  - action: utter_ask_info
+  - action: utter_info
   - intent: affirm
-  - action: utter_ask_age
-  - intent: age
-  - action: utter_ask_city
-  - intent: city
+  - action: user_form
+  - active_loop: user_form
   - action: utter_thanks_info
-  - action: utter_ask_advice
+  - action: utter_weather
   - intent: deny
   - action: utter_ask_already_know
   - intent: affirm
   - action: utter_goodbye
-
-- story: Unhappy path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_ask_info
-  - intent: affirm
-  - action: utter_ask_age
-  - intent: age
-  - action: utter_ask_city
-  - intent: city
-  - action: utter_thanks_info
-  - action: utter_ask_advice
-  - intent: deny
-  - action: utter_ask_already_know
-  - intent: deny
-  - action: utter_mean_goodbye

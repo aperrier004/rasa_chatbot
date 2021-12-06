@@ -23,7 +23,7 @@ class ActionHelloWorld(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
-        city="Bordeaux" #city=tracker.get_slot("city")
+        city=tracker.get_slot("city")
         weather=int(Weather(city)['temp']-273)
         dispatcher.utter_message(response="utter_weather",weather=weather)
 

@@ -8,9 +8,9 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-  - age
-  - city
   - weather
+  - thankful
+  - inform
 
 entities:
 - age
@@ -20,21 +20,18 @@ entities:
 slots:
   age:
     type: text
-    influence_conversation: false
     mappings:
     - type: from_entity
       entity: age
 
   city:
     type: text
-    influence_conversation: false
     mappings:
     - type: from_entity
       entity: city
 
   weather:
     type: text
-    influence_conversation: false
     mappings:
     - type: from_entity
       entity: weather
@@ -66,7 +63,7 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
-  utter_ask_info:
+  utter_info:
   - text: "ok, can I have some information about you ?"
 
   utter_ask_city:
@@ -78,22 +75,19 @@ responses:
   utter_thanks_info:
   - text: "Thank you for your information."
 
-  utter_ask_advice:
-  - text: "Would you like to hear a life advice ?"
-
   utter_ask_already_know:
   - text: "Are you're life perfect ?"
 
   utter_mean_goodbye:
   - text: "Ok, such a shame for you, bye."
 
-  utter_ask_weather:
+  utter_weather:
   - text: "Would you like to know about the weather ?"
 
 # TODO
-  utter_weather:
+  utter_weather_res:
   - text: "Here is the weather for the city {city}: {weather}°"
 
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+#session_config:
+#  session_expiration_time: 60
+#  carry_over_slots_to_new_session: true

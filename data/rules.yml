@@ -15,4 +15,4 @@ rules:
 - rule: Give the weather for the default city
   steps:
   - intent: weather
-  - action: utter_weather
+  - action: utter_weather_res

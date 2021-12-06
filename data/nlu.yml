@@ -67,6 +67,7 @@ nlu:
     - so so perfect
     - so good
     - so perfect
+    - fine
 
 - intent: mood_unhappy
   examples: |
@@ -94,30 +95,7 @@ nlu:
 
 - regex: age_number
   examples: |
-    - ^100|[1-9]?\d$
-
-- intent: age
-  examples: |
-    - I am (age_number) years old
-    - I'm (age_number) years old
-    - I'm (age_number) y.o
-    - (age_number)
-    - I'm (age_number)
-
-# A VOIR SI ON EN A VRAIMENT BESOIN
-- lookup: city_list
-  examples: |
-    - Afghanistan
-    - Albania
-    - France
-    - Zambia
-    - Zimbabwe
-
-- intent: city
-  examples: |
-    - I live in (city_list)
-    - (city_list)
-    - My city is (city_list)
+    - ^100|[1-9]?\d
 
 - intent: thankful
   examples: |
@@ -133,7 +111,13 @@ nlu:
     - tell me the weather forcast
     - hows the weather today
 
-
-
-
-
+- intent: inform
+  examples: |
+    - I am [age_number](age) years old
+    - I'm [age_number](age) years old
+    - I'm [age_number](age) y.o
+    - [age_number](age)
+    - I'm [age_number](age)
+    - I live in (city)
+    - (city)
+    - My city is (city)
