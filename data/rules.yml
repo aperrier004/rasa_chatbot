@@ -17,7 +17,6 @@ rules:
   - intent: weather
   - action: action_weather_api
 
-
 - rule: activate user form
   steps:
   - action: user_form

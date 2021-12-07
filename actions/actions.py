@@ -23,7 +23,14 @@ class ActionWeather(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
+
         city = tracker.get_slot("city")
+
+        if city is None:
+            weather = int(Weather("Brasilia")['temp']-273)
+            dispatcher.utter_message(response="utter_cheer_up", weather=str(weather))
+            return []
+
         weather = int(Weather(city)['temp']-273)
         dispatcher.utter_message(response="utter_weather_res", weather=str(weather))
 

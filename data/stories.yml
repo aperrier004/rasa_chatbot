@@ -12,3 +12,23 @@ stories:
   - action: user_form
   - active_loop: user_form
 
+- story: unhappy path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: action_weather_api
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_goodbye
+
+- story: unhappy path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: action_weather_api
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_mean_goodbye
