@@ -8,3 +8,4 @@ def Weather(city):
     format_add = json_data['main'] 
     print(format_add) 
     return format_add
+    

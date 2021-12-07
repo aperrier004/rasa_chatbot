@@ -75,9 +75,6 @@ responses:
   utter_thanks_info:
   - text: "Thank you for your information."
 
-  utter_ask_already_know:
-  - text: "Are you're life perfect ?"
-
   utter_mean_goodbye:
   - text: "Ok, such a shame for you, bye."
 
@@ -88,6 +85,8 @@ responses:
   utter_weather_res:
   - text: "Here is the weather for the city {city}: {weather}°"
 
+actions:
+  - action_weather_api
 #session_config:
 #  session_expiration_time: 60
 #  carry_over_slots_to_new_session: true

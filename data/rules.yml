@@ -15,4 +15,20 @@ rules:
 - rule: Give the weather for the default city
   steps:
   - intent: weather
-  - action: utter_weather_res
+  - action: action_weather_api
+
+
+- rule: activate user form
+  steps:
+  - action: user_form
+  - active_loop: user_form
+
+- rule: submit form
+  condition: 
+  - active_loop: user_form
+  steps:
+  - action: user_form
+  - active_loop: null
+  - action: utter_thanks_info
+  - action: action_deactivate_loop
+  

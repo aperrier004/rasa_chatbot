@@ -97,6 +97,10 @@ nlu:
   examples: |
     - ^100|[1-9]?\d
 
+- regex: city_name
+  examples: |
+    - ^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*
+
 - intent: thankful
   examples: |
     - Thank you
@@ -118,6 +122,11 @@ nlu:
     - I'm [age_number](age) y.o
     - [age_number](age)
     - I'm [age_number](age)
-    - I live in (city)
-    - (city)
-    - My city is (city)
+    - I live in [Bordeaux](city)
+    - [Lyon](city)
+    - My city is [Paris](city)
+    - [Merignac](city)
+    - I am near [Nantes](city)
+    - The city i live in is [Denver](city)
+    - [New York](city) is my city
+    - [La Rochelle](city) is where I live
