@@ -11,6 +11,16 @@ stories:
   - intent: affirm
   - action: user_form
   - active_loop: user_form
+  - action: user_form
+  - active_loop: null
+  - action: utter_thanks_info
+  - action: action_deactivate_loop
+  - intent: weather
+  - action: action_weather_api
+  - intent: thankful
+  - action: utter_welcome
+  - intent: goodbye
+  - action: utter_goodbye
 
 - story: unhappy path 1
   steps:
