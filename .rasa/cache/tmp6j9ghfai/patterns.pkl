@@ -1,6 +1,0 @@
-[
-  {
-    "name": "age_number",
-    "pattern": "^100|[1-9]?\\d"
-  }
-]
