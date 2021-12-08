@@ -1,7 +1,9 @@
 import requests
 
 def Weather(city): 
+    # Call openweathermap API
     api_address='http://api.openweathermap.org/data/2.5/weather?q='
+    # Authentification's token
     api_key = '&appid=f34fba4479ffc3e251ddb40f2e8ca3a5'
     url = api_address + city + api_key
     json_data = requests.get(url).json() 

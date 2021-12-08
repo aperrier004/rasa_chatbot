@@ -30,4 +30,9 @@ rules:
   - active_loop: null
   - action: utter_thanks_info
   - action: action_deactivate_loop
+
+- rule: Say you're weclome anytime the user thanks
+  steps:
+  - intent: thankful
+  - action: utter_welcome
   

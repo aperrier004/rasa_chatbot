@@ -10,7 +10,12 @@ intents:
   - bot_challenge
   - weather
   - thankful
-  - inform
+  - inform:
+      use_entities:
+        - age
+        - city
+      ignore_entities:
+        - weather
 
 entities:
 - age
@@ -80,12 +85,15 @@ responses:
   utter_weather:
   - text: "Would you like to know about the weather ?"
 
-# TODO
+  utter_welcome:
+  - text: "You're welcome, I'm here for that."
+
   utter_weather_res:
   - text: "Here is the weather for the city {city}: {weather}°"
 
 actions:
   - action_weather_api
+
 #session_config:
 #  session_expiration_time: 60
 #  carry_over_slots_to_new_session: true
